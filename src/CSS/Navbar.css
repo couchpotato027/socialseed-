@@ -1,0 +1,156 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #fff;
+  border-bottom: 2px solid #2f6fed;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  background-color: #2f6fed;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2f6fed;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin-left: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2f6fed;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 4px 8px;
+  background-color: #f9f9f9;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 6px;
+  width: 180px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.btn-outline {
+  padding: 8px 14px;
+  border: 1px solid #2f6fed;
+  background-color: white;
+  color: #2f6fed;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: #e6f0ff;
+}
+
+.btn-primary {
+  padding: 8px 14px;
+  background-color: #2f6fed;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #2455c0;
+}
+/* 🔁 Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem 2rem;
+    border-top: 1px solid #ccc;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .search-box input {
+    width: 120px;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #2f6fed;
+    background: none;
+    border: none;
+  }
+}
+
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+}

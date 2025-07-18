@@ -1,0 +1,349 @@
+.home-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2563eb;
+  padding: 4rem 6%;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e7ff;
+}
+
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form h3 {
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.send-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-btn:hover {
+  background-color: #2563eb; /* Keep blue on hover */
+}
+
+/* Connections Section */
+.connections-section {
+  padding: 4rem 6%;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.connections-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.connections-section p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.connections-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.connection-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #e5e7eb;
+  max-width: 220px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.connection-card:hover {
+  transform: translateY(-4px);
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.connection-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #111827;
+}
+
+.connection-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.connect-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background-color: transparent;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.connect-btn:hover {
+  background-color: #f3f4f6;
+}
+/* Why SocialSeed Section */
+.why-socialseed {
+  padding: 4rem 6%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.why-socialseed h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.why-socialseed p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+}
+
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.why-item {
+  display: flex;
+  gap: 1rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+.why-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.why-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.why-item p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 4rem 6%;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.testimonials-section p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 320px;
+  box-shadow: 0 0 0 1px #e5e7eb;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #3b82f6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-author strong {
+  color: #111827;
+  font-size: 1rem;
+}
+
+.testimonial-author span {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* 🔁 Responsive Media Queries */
+@media (max-width: 1024px) {
+  .hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact-form {
+    margin: 2rem auto 0;
+  }
+
+  .why-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .why-item img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 5%;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .connections-grid,
+  .testimonials-grid,
+  .why-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connection-card,
+  .testimonial-card {
+    max-width: 90%;
+  }
+
+  .why-item {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-left p,
+  .connections-section p,
+  .why-socialseed p,
+  .testimonials-section p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .connections-section,
+  .why-socialseed,
+  .testimonials-section {
+    padding: 3rem 4%;
+  }
+}
+
+

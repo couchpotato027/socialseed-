@@ -1,0 +1,132 @@
+.network-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f1f1f;
+  padding: 0;
+  margin: 0;
+}
+
+.network-blue-bg {
+  background: linear-gradient(to right, #4a90e2, #3578e5);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.network-intro-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.network-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.network-subheading {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.network-statistics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.network-stat-box {
+  background: white;
+  color: #333;
+  padding: 20px 30px;
+  border-radius: 12px;
+  min-width: 220px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.network-stat-box p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.network-stat-box h2 {
+  font-size: 1.8rem;
+  color: #2563eb;
+}
+
+/* Connections Section */
+.network-connection-list {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.network-list-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.network-list-subtitle {
+  font-size: 1rem;
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* Connection Cards */
+.network-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.network-person-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.network-person-card:hover {
+  transform: translateY(-4px);
+}
+
+.network-person-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.network-person-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.network-person-role {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .network-statistics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .network-card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
