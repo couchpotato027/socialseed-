@@ -99,52 +99,42 @@ function Home() {
         <p>Hear from professionals who have found value in our platform</p>
 
         <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <div className="quote-icon">❝</div>
-            <p>
-              SocialSeed has completely transformed my professional networking experience.
-              The quality of connections I've made here is far better than any other platform I’ve used.
-            </p>
-            <div className="testimonial-author">
-              <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Michael" />
-              <div>
-                <strong>Michael Chen</strong>
-                <span>Product Manager at TechCorp</span>
+          {[
+            {
+              text: "SocialSeed has completely transformed my professional networking experience...",
+              name: "Michael Chen",
+              title: "Product Manager at TechCorp",
+              img: "https://randomuser.me/api/portraits/men/11.jpg",
+            },
+            {
+              text: "I landed my dream job thanks to a connection I made on SocialSeed...",
+              name: "David Park",
+              title: "Data Scientist at AnalyticsPro",
+              img: "https://randomuser.me/api/portraits/men/32.jpg",
+            },
+            {
+              text: "As a freelancer, SocialSeed has been invaluable for finding new clients...",
+              name: "Jennifer Lee",
+              title: "UX Researcher at UserFirst",
+              img: "https://randomuser.me/api/portraits/women/23.jpg",
+            },
+          ].map((t, i) => (
+            <div className="testimonial-card" key={i}>
+              <div className="quote-icon">❝</div>
+              <p>{t.text}</p>
+              <div className="testimonial-author">
+                <img src={t.img} alt={t.name} />
+                <div>
+                  <strong>{t.name}</strong>
+                  <span>{t.title}</span>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="testimonial-card">
-            <div className="quote-icon">❝</div>
-            <p>
-              I landed my dream job thanks to a connection I made on SocialSeed.
-              The focused approach to professional networking makes all the difference.
-            </p>
-            <div className="testimonial-author">
-              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David" />
-              <div>
-                <strong>David Park</strong>
-                <span>Data Scientist at AnalyticsPro</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="testimonial-card">
-            <div className="quote-icon">❝</div>
-            <p>
-              As a freelancer, SocialSeed has been invaluable for finding new clients and collaborators.
-              The industry-specific groups are particularly helpful.
-            </p>
-            <div className="testimonial-author">
-              <img src="https://randomuser.me/api/portraits/women/23.jpg" alt="Jennifer" />
-              <div>
-                <strong>Jennifer Lee</strong>
-                <span>UX Researcher at UserFirst</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
+
+
     </div>
   );
 }
