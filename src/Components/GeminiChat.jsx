@@ -1,18 +1,39 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const chatBoxStyle = {
-  position: 'fixed',
-  bottom: '24px',
-  right: '24px',
-  width: '350px',
-  maxHeight: '500px',
-  background: '#fff',
-  borderRadius: '16px',
-  boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
-  display: 'flex',
-  flexDirection: 'column',
-  zIndex: 1000,
-  overflow: 'hidden',
+const getChatBoxStyle = () => {
+  if (window.innerWidth < 600) {
+    return {
+      position: 'fixed',
+      bottom: '12px',
+      right: '2vw',
+      left: '2vw',
+      width: '96vw',
+      maxWidth: '98vw',
+      maxHeight: '60vh',
+      background: '#fff',
+      borderRadius: '12px',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
+      display: 'flex',
+      flexDirection: 'column',
+      zIndex: 1000,
+      overflow: 'hidden',
+    };
+  }
+  return {
+    position: 'fixed',
+    bottom: '24px',
+    right: '24px',
+    width: '350px',
+    maxWidth: '95vw',
+    maxHeight: '70vh',
+    background: '#fff',
+    borderRadius: '16px',
+    boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
+    display: 'flex',
+    flexDirection: 'column',
+    zIndex: 1000,
+    overflow: 'hidden',
+  };
 };
 
 const headerStyle = {
@@ -90,6 +111,13 @@ function GeminiChat() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef(null);
+  const [chatBoxStyle, setChatBoxStyle] = useState(getChatBoxStyle());
+
+  useEffect(() => {
+    const handleResize = () => setChatBoxStyle(getChatBoxStyle());
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     if (open && messagesEndRef.current) {
